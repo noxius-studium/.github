@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 190" width="1200" height="190" role="img" aria-labelledby="title desc">
+  <title id="title">Noxius Studium build process</title>
+  <desc id="desc">Question, model, test, compare, and reuse form a continuous engineering workflow.</desc>
+  <style>
+    .line{animation:line 5s linear infinite}.beat{animation:beat 2s ease-in-out infinite}
+    @keyframes line{to{stroke-dashoffset:-920}}@keyframes beat{0%,100%{opacity:1}50%{opacity:.25}}
+    @media(prefers-reduced-motion:reduce){.line,.beat{animation:none}}
+  </style>
+  <rect width="1200" height="190" rx="12" fill="#10171d"/>
+  <text x="42" y="43" fill="#ffb347" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12" letter-spacing="1.6">OPERATING LOOP</text>
+  <path d="M92 115H1108" stroke="#3e4d57" stroke-width="2"/>
+  <path class="line" d="M92 115H1108" stroke="#3ad6c6" stroke-width="2" stroke-dasharray="80 936"/>
+  <g font-family="ui-monospace,SFMono-Regular,Consolas,monospace" text-anchor="middle">
+    <g transform="translate(92 115)"><circle r="11" fill="#10171d" stroke="#ffb347" stroke-width="2"/><text y="42" fill="#d2d9de" font-size="13">QUESTION</text></g>
+    <g transform="translate(346 115)"><circle r="11" fill="#10171d" stroke="#ffb347" stroke-width="2"/><text y="42" fill="#d2d9de" font-size="13">MODEL</text></g>
+    <g transform="translate(600 115)"><circle class="beat" r="11" fill="#3ad6c6"/><text y="42" fill="#d2d9de" font-size="13">TEST</text></g>
+    <g transform="translate(854 115)"><circle r="11" fill="#10171d" stroke="#ffb347" stroke-width="2"/><text y="42" fill="#d2d9de" font-size="13">COMPARE</text></g>
+    <g transform="translate(1108 115)"><circle r="11" fill="#10171d" stroke="#ffb347" stroke-width="2"/><text y="42" fill="#d2d9de" font-size="13">REUSE</text></g>
+  </g>
+</svg>

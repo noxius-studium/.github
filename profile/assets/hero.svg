@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400" role="img" aria-labelledby="title desc">
+  <title id="title">Noxius Studium — learn by building</title>
+  <desc id="desc">A dark technical field-note banner with an animated signal passing through build, verify, and publish.</desc>
+  <style>
+    .scan{animation:scan 8s linear infinite}.dash{animation:dash 5s linear infinite}.pulse{animation:pulse 2.2s ease-in-out infinite}.traveler{animation:travel 5s cubic-bezier(.45,.05,.55,.95) infinite}
+    @keyframes scan{from{transform:translateX(-260px)}to{transform:translateX(1460px)}}
+    @keyframes dash{to{stroke-dashoffset:-620}}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+    @keyframes travel{0%{transform:translate(0,0)}33%{transform:translate(172px,-55px)}66%{transform:translate(345px,-17px)}100%{transform:translate(520px,-89px)}}
+    @media(prefers-reduced-motion:reduce){.scan,.dash,.pulse,.traveler{animation:none}}
+  </style>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#27323b" stroke-width="1"/></pattern>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <clipPath id="frame"><rect x="18" y="18" width="1164" height="364" rx="10"/></clipPath>
+  </defs>
+  <rect width="1200" height="400" rx="14" fill="#0b1015"/>
+  <rect x="18" y="18" width="1164" height="364" rx="10" fill="url(#grid)" stroke="#34414b"/>
+  <g clip-path="url(#frame)">
+    <path d="M-40 84H1240" stroke="#172027" stroke-width="46"/>
+    <rect class="scan" x="-260" y="61" width="260" height="46" fill="#1d2931"/>
+    <text x="1080" y="350" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="176" font-weight="800" fill="#111920">NS</text>
+  </g>
+  <g font-family="ui-monospace,SFMono-Regular,Consolas,monospace" fill="#8d9aa5" font-size="13" letter-spacing="2">
+    <text x="52" y="53">FIELD NOTE / 001</text>
+    <text x="1148" y="53" text-anchor="end">ZA · OPEN WORKBENCH</text>
+  </g>
+  <text x="52" y="174" font-family="Arial,Helvetica,sans-serif" font-size="78" font-weight="800" letter-spacing="-4" fill="#f4f0e6">NOXIUS</text>
+  <text x="52" y="247" font-family="Georgia,'Times New Roman',serif" font-size="72" font-style="italic" fill="#f4f0e6">studium</text>
+  <text x="56" y="292" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="15" letter-spacing="2" fill="#aab4bc">LEARN BY BUILDING. PROVE IT WITH TESTS.</text>
+  <g transform="translate(52 342)" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12">
+    <circle class="pulse" cx="5" cy="-4" r="5" fill="#3ad6c6"/>
+    <text x="20" fill="#8d9aa5" letter-spacing="1.2">IDENTITY · EVENTS · PROTOCOLS · TOOLING</text>
+  </g>
+  <path d="M628 271l172-55 173 38 175-72" fill="none" stroke="#43515b" stroke-width="2" stroke-dasharray="5 8"/>
+  <path class="dash" d="M628 271l172-55 173 38 175-72" fill="none" stroke="#3ad6c6" stroke-width="2" stroke-dasharray="72 548"/>
+  <g font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="11" letter-spacing="1.5" text-anchor="middle">
+    <g transform="translate(628 271)"><circle r="8" fill="#0b1015" stroke="#ffb347" stroke-width="2"/><text y="31" fill="#c7d0d7">QUESTION</text></g>
+    <g transform="translate(800 216)"><circle r="8" fill="#0b1015" stroke="#ffb347" stroke-width="2"/><text y="31" fill="#c7d0d7">BUILD</text></g>
+    <g transform="translate(973 254)"><circle r="8" fill="#0b1015" stroke="#ffb347" stroke-width="2"/><text y="31" fill="#c7d0d7">VERIFY</text></g>
+    <g transform="translate(1148 182)"><circle r="8" fill="#0b1015" stroke="#ffb347" stroke-width="2"/><text y="31" fill="#c7d0d7">PUBLISH</text></g>
+  </g>
+  <circle class="traveler" cx="628" cy="271" r="6" fill="#3ad6c6" filter="url(#glow)"/>
+</svg>

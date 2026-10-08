@@ -1,83 +1,104 @@
 <p align="center">
-  <img src="./assets/hero.svg" width="100%" alt="Noxius Studium — learn by building, prove it with tests" />
+  <img src="./assets/hero.svg" width="100%" alt="Noxius Studium — built to be used, open to be understood. FluidMusic, Enchanted Composer, EventFlowSys, and protocol studies." />
 </p>
 
 <p align="center">
-  <strong>A learning-first engineering lab for the parts worth understanding.</strong><br />
-  <sub>Tools, specifications, and reference implementations — with the seams left visible.</sub>
+  <strong>A learning-first engineering lab, building tools you can use and systems you can inspect.</strong><br />
+  Desktop music, better composition, observable events, and executable protocol comparisons.
 </p>
 
 <p align="center">
-  <a href="https://github.com/noxius-studium?tab=repositories"><img alt="Explore repositories" src="https://img.shields.io/badge/explore-repositories-0b1015?style=flat-square&logo=github&logoColor=white"></a>
-  <a href="https://pypi.org/project/eventflowsys/"><img alt="eventflowsys on PyPI" src="https://img.shields.io/pypi/v/eventflowsys?style=flat-square&color=3ad6c6&label=eventflowsys"></a>
-  <img alt="Based in South Africa" src="https://img.shields.io/badge/South%20Africa-ffb347?style=flat-square">
+  <a href="https://github.com/noxius-studium?tab=repositories">Explore the repositories</a> ·
+  <a href="https://github.com/noxius-studium/fluid-music">FluidMusic</a> ·
+  <a href="https://github.com/noxius-studium/enchanted-composer">Enchanted Composer</a>
 </p>
 
 ---
 
-## The workbench
+## From the workbench to your desktop
 
-We return to the same engineering question from different directions: **how do you make behavior visible, comparable, and reusable?**
+**FluidMusic** and **Enchanted Composer** now have their own public repositories. Both extend **Hermes Desktop**, with source, architecture notes, installation guidance, and explicit limitations.
 
-### 01 / Identity conformance
+The organization spans **18 repositories: 6 public and 12 private** at this refresh. The public directory below distinguishes the desktop tools, reference projects, and experimental scaffold—not every repository has the same maturity or license.
 
-<p align="center">
-  <img src="./assets/identity-conformance.svg" width="100%" alt="One South African ID specification tested across seven languages" />
-</p>
+### 01 / FluidMusic
 
-One normative South African ID-number specification, one shared conformance suite, and implementations in **C++, C#, Go, PHP, Python, Rust, and TypeScript**. The repository remains on the private workbench while the implementations converge — no public 404 links pretending otherwise.
+<a href="https://github.com/noxius-studium/fluid-music"><img src="./assets/fluid-music.svg" width="100%" alt="FluidMusic: Spotify, internet radio, and a persistent local library share playlists and a queue. Spotify plays on a Connect device; radio and local audio play inside Hermes." /></a>
 
-### 02 / Event systems · [`eventflowsys`](https://github.com/noxius-studium/eventflowsys)
+A music workspace with **Spotify Connect, internet radio, a persistent local library, and mixed playlists**. A player dock and movable mini-player keep playback controls close; the queue coordinates source handoffs without pretending every provider has the same capabilities.
 
-<p align="center">
-  <a href="https://github.com/noxius-studium/eventflowsys"><img src="./assets/event-systems.svg" width="100%" alt="EventFlowSys routes priority and TTL messages to threaded and async subscriber groups" /></a>
-</p>
+- **Build a collection:** approved-folder indexing, stable local-track references, playlist editing, and JSON import/export.
+- **Keep control:** Spotify search and device selection, radio discovery, source-aware transport, and queue management.
+- **See the sound where available:** spectrum, waveform, and mirrored visuals for accessible audio samples. Spotify Connect and indexed local playback are not analysed. Browser-opened local files support session-only analysis; radio analysis depends on station CORS.
+
+[`Source & setup`](https://github.com/noxius-studium/fluid-music#readme) · [`Releases`](https://github.com/noxius-studium/fluid-music/releases) · [`Architecture`](https://github.com/noxius-studium/fluid-music/blob/main/docs/architecture.md) · [`Limitations`](https://github.com/noxius-studium/fluid-music/blob/main/docs/limitations.md)
+
+### 02 / Enchanted Composer
+
+<a href="https://github.com/noxius-studium/enchanted-composer"><img src="./assets/enchanted-composer.svg" width="100%" alt="Enchanted Composer: enhance an unsent draft with reusable prompts and undo/redo, or explicitly start voice bound to the selected connection, profile, and chat." /></a>
+
+**Draft enhancement, reusable prompt libraries, multi-step undo/redo, and owner-bound live voice**—without replacing Hermes's native send, model, dictation, or voice controls.
+
+- **Refine before sending:** enhance an unsent draft, reuse prompts, and step through revision history without repeating the model call for redo.
+- **Keep voice in context:** explicitly started full-duplex voice captures its connection, profile, and chat; delegated tool work stays with that owner.
+- **Make the boundaries visible:** credentials stay backend-side, microphone access is explicit, and provider/billing routes do not silently switch. Ordinary voice transcripts remain temporary; delegated tool requests and results are retained in the bound chat.
+
+[`Source`](https://github.com/noxius-studium/enchanted-composer) · [`Installation`](https://github.com/noxius-studium/enchanted-composer/blob/main/docs/installation.md) · [`Architecture`](https://github.com/noxius-studium/enchanted-composer/blob/main/docs/architecture.md) · [`Privacy & security`](https://github.com/noxius-studium/enchanted-composer/blob/main/docs/privacy-and-security.md) · [`Limitations`](https://github.com/noxius-studium/enchanted-composer/blob/main/docs/limitations.md)
+
+## Reference projects
+
+### Event systems / EventFlowSys
+
+<a href="https://github.com/noxius-studium/eventflowsys"><img src="./assets/event-systems.svg" width="100%" alt="EventFlowSys routes priority and TTL messages to threaded and async subscriber groups, with hooks and delivery metrics." /></a>
 
 A Python event bus with threaded and `asyncio` implementations, grouped subscriptions, priority, TTL, broadcast delivery, hooks, unread tracking, and metrics.
 
-```bash
+```sh
 pip install eventflowsys
 ```
 
-[`README`](https://github.com/noxius-studium/eventflowsys#readme) · [`tests`](https://github.com/noxius-studium/eventflowsys/tree/main/tests) · [`PyPI`](https://pypi.org/project/eventflowsys/)
+[`Source & examples`](https://github.com/noxius-studium/eventflowsys#readme) · [`Tests`](https://github.com/noxius-studium/eventflowsys/tree/main/tests) · [`PyPI`](https://pypi.org/project/eventflowsys/)
 
-### 03 / Protocol parity · [`soap-json-graphql-example`](https://github.com/noxius-studium/soap-json-graphql-example)
+### Protocol comparison / REST · GraphQL · SOAP
 
-<p align="center">
-  <a href="https://github.com/noxius-studium/soap-json-graphql-example"><img src="./assets/protocol-parity.svg" width="100%" alt="REST, GraphQL, and SOAP expose the same user operations for comparison" /></a>
-</p>
+<a href="https://github.com/noxius-studium/soap-json-graphql-example"><img src="./assets/protocol-parity.svg" width="100%" alt="REST, GraphQL, and SOAP interfaces around a shared user domain, with different operations available in each interface." /></a>
 
-The same user operations exposed through **REST**, **GraphQL**, and **SOAP**. The domain stays fixed so the protocol trade-offs become obvious in real calling code.
+A shared user domain exposed through **REST, GraphQL, and SOAP**, with concrete calling examples. Compare request shapes and interface choices without changing the underlying domain. This is an educational comparison, not a claim of identical operation coverage across all three interfaces.
 
-[`README`](https://github.com/noxius-studium/soap-json-graphql-example#readme) · [`application entry point`](https://github.com/noxius-studium/soap-json-graphql-example/blob/main/main.py)
+[`Source & calling examples`](https://github.com/noxius-studium/soap-json-graphql-example#readme) · [`Application entry point`](https://github.com/noxius-studium/soap-json-graphql-example/blob/main/main.py)
 
-### 04 / Private workshop
+## Public directory
 
-<p align="center">
-  <img src="./assets/private-workshop.svg" width="100%" alt="Noxius desktop tooling, Hermes plugins, and defensive software research" />
-</p>
+| Repository | What you will find |
+| :--- | :--- |
+| [fluid-music](https://github.com/noxius-studium/fluid-music) | Hermes Desktop music workspace. **CC BY-NC 4.0**; non-commercial terms apply. |
+| [enchanted-composer](https://github.com/noxius-studium/enchanted-composer) | Hermes Desktop draft, prompt, history, and voice tools. **MIT**. |
+| [eventflowsys](https://github.com/noxius-studium/eventflowsys) | Python event bus, examples, and tests. **MIT**. |
+| [soap-json-graphql-example](https://github.com/noxius-studium/soap-json-graphql-example) | Educational API comparison over a shared user domain. |
+| [BaseProjects](https://github.com/noxius-studium/BaseProjects) | Experimental Python database-service scaffold; not a finished product. |
+| [.github](https://github.com/noxius-studium/.github) | This organization profile and its original SVG artwork. |
 
-Behind the public repositories: the **Noxius** Tauri desktop launcher, **Hermes** composer and media plugins, a curated skill library, and defensive software-protection research. These stay private until their boundaries, documentation, and release story are strong enough to stand on their own.
+Check each repository's license and documentation before reuse. Visibility is not a blanket license grant.
 
----
+## Still on the private workbench
+
+<img src="./assets/private-workshop.svg" width="100%" alt="Private work remains separate: Noxius desktop tooling, identity conformance, a skill library, and defensive research. The two public Hermes plugins are featured above." />
+
+The private workshop includes the **Noxius** desktop launcher, **South African ID-number conformance** work across C++, C#, Go, PHP, Python, Rust, and TypeScript, a curated **Hermes skill library**, and **defensive software-protection research**. These are not public downloads or promised release dates. FluidMusic and Enchanted Composer have moved into dedicated public repositories.
 
 ## How we work
 
-<p align="center">
-  <img src="./assets/operating-loop.svg" width="100%" alt="Question, model, test, compare, reuse" />
-</p>
+<img src="./assets/operating-loop.svg" width="100%" alt="Our working loop: question, model, test, compare, reuse." />
 
-- **Specifications before slogans.** Shared behavior is written down and tested.
-- **Examples that run.** Repositories teach through executable code, not screenshots alone.
-- **Different tools, same question.** Languages and protocols are compared on equivalent problems.
-- **Honest boundaries.** Experiments are labelled as experiments; production claims require evidence.
+- **Specifications before slogans.** Write down shared behavior and test it.
+- **Examples that run.** Teach through executable code, not screenshots alone.
+- **Respect the boundaries.** Provider capabilities, ownership, privacy, and licensing remain explicit.
+- **Evidence before claims.** Label experiments; distinguish simulated checks from live acceptance.
 
 ## Contributing
 
-Public repositories are open for focused issues and pull requests. Start with the repository README and tests, keep changes narrow, and include a runnable example when behavior changes.
+Start with the relevant repository's README, contribution guidance, and tests. Focused issues and pull requests are welcome: include a reproducible example, keep changes narrow, and never attach credentials or unredacted private data.
 
 ---
 
-<p align="center">
-  <sub>Build it. Break the assumption. Write down what survived.</sub>
-</p>
+<p align="center"><sub>Build it. Break the assumption. Write down what survived.</sub></p>

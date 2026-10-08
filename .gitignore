@@ -2,3 +2,6 @@
 
 #Ignore insiders AI rules
 .github\instructions\codacy.instructions.md
+
+# Local profile previews and verification artifacts
+.hermes-tests/

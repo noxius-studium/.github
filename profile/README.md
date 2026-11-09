@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="./assets/hero.svg" width="100%" alt="Noxius Studium — built to be used, open to be understood. FluidMusic, Enchanted Composer, EventFlowSys, and protocol studies." />
+  <img src="./assets/hero.svg" width="100%" alt="Noxius Studium — built to be used, open to be understood. FluidMusic, Enchanted Composer, Hermes Navigator, EventFlowSys, and protocol studies." />
 </p>
 
 <p align="center">
   <strong>A learning-first engineering lab, building tools you can use and systems you can inspect.</strong><br />
-  Desktop music, better composition, observable events, and executable protocol comparisons.
+  Desktop music, better composition, workspace navigation, observable events, and executable protocol comparisons.
 </p>
 
 <p align="center">
@@ -17,9 +17,9 @@
 
 ## From the workbench to your desktop
 
-**FluidMusic** and **Enchanted Composer** now have their own public repositories. Both extend **Hermes Desktop**, with source, architecture notes, installation guidance, and explicit limitations.
+**FluidMusic** and **Enchanted Composer** have public repositories. **Hermes Navigator** now has a dedicated private source repository while its small Hermes host seam remains version-pinned. All three extend **Hermes Desktop** with architecture notes, installation guidance, and explicit limitations.
 
-The organization spans **18 repositories: 6 public and 12 private** at this refresh. The public directory below distinguishes the desktop tools, reference projects, and experimental scaffold—not every repository has the same maturity or license.
+The organization spans **19 repositories: 6 public and 13 private** at this refresh. The public directory below distinguishes the desktop tools, reference projects, and experimental scaffold—not every repository has the same maturity or license.
 
 ### 01 / FluidMusic
 
@@ -44,6 +44,18 @@ A music workspace with **Spotify Connect, internet radio, a persistent local lib
 - **Make the boundaries visible:** credentials stay backend-side, microphone access is explicit, and provider/billing routes do not silently switch. Ordinary voice transcripts remain temporary; delegated tool requests and results are retained in the bound chat.
 
 [`Source`](https://github.com/noxius-studium/enchanted-composer) · [`Installation`](https://github.com/noxius-studium/enchanted-composer/blob/main/docs/installation.md) · [`Architecture`](https://github.com/noxius-studium/enchanted-composer/blob/main/docs/architecture.md) · [`Privacy & security`](https://github.com/noxius-studium/enchanted-composer/blob/main/docs/privacy-and-security.md) · [`Limitations`](https://github.com/noxius-studium/enchanted-composer/blob/main/docs/limitations.md)
+
+### 03 / Hermes Navigator
+
+<img src="./assets/hermes-navigator.svg" width="100%" alt="Hermes Navigator: core and plugin destinations flow into one customizable catalog, then render as Peek shortcuts or Atlas categories beside native Sessions." />
+
+**Customizable Peek and Atlas navigation around Hermes's native Sessions browser**—without rebuilding session, project, profile, route, or plugin ownership logic.
+
+- **Keep Sessions native:** project drill-down, folders, search, context menus, pinned sessions, pagination, and virtualization remain the stock Hermes implementation.
+- **Arrange every route:** core and plugin destinations are detected into one live catalog, with local labels, ordering, visibility, and category assignment.
+- **Choose the density:** Peek keeps up to six shortcuts above Sessions; Atlas organizes destinations into editable category lanes.
+
+Private source integration while the required Hermes SDK seam remains version-pinned. The repository includes deterministic build checks, SDK-surface verification, and a guarded host installer.
 
 ## Reference projects
 
@@ -82,9 +94,9 @@ Check each repository's license and documentation before reuse. Visibility is no
 
 ## Still on the private workbench
 
-<img src="./assets/private-workshop.svg" width="100%" alt="Private work remains separate: Noxius desktop tooling, identity conformance, a skill library, and defensive research. The two public Hermes plugins are featured above." />
+<img src="./assets/private-workshop.svg" width="100%" alt="Private work remains separate: Hermes Navigator, Noxius desktop tooling, identity conformance, a skill library, and defensive research. The public Hermes plugins are featured above." />
 
-The private workshop includes the **Noxius** desktop launcher, **South African ID-number conformance** work across C++, C#, Go, PHP, Python, Rust, and TypeScript, a curated **Hermes skill library**, and **defensive software-protection research**. These are not public downloads or promised release dates. FluidMusic and Enchanted Composer have moved into dedicated public repositories.
+The private workshop includes **Hermes Navigator**, the **Noxius** desktop launcher, **South African ID-number conformance** work across C++, C#, Go, PHP, Python, Rust, and TypeScript, a curated **Hermes skill library**, and **defensive software-protection research**. These are not public downloads or promised release dates. FluidMusic and Enchanted Composer have moved into dedicated public repositories.
 
 ## How we work
 
